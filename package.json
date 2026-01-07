@@ -1,0 +1,33 @@
+{
+  "name": "Levicey",
+  "version": "1.0.0",
+  "description": "basic but modern website about keyboards",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open",
+    "prod": "cross-env NODE_ENV=production webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ILyosbek",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.5",
+    "mini-css-extract-plugin": "^2.9.4",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "webpack": "^5.103.0",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.2.3",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "webpack-dev-server": "^5.2.2"
+  }
+}
