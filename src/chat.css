@@ -1,11 +1,4 @@
 
-/* Hero text styling */
-.h1first, .h1second {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease-out;
-}
-
 /* Active class qo‘shilganda animatsiya ishlaydi */
 .visible {
   opacity: 1;
