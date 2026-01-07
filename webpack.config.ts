@@ -1,5 +1,6 @@
 import BuildPLugins from "./config/buikd/buildplugins";
 import { buildResolve } from "./config/buikd/buildresolve";
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require('path');
 const isProd = process.env.NODE_ENV==="production"
 const isDev=!isProd
@@ -16,10 +17,11 @@ entry: './index.tsx',
   output: {
     filename: 'bundle.[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
+     clean: true,
   },
  
   devServer:{
-port:3090,
+port:5090,
 hot:true,
  static: {
     directory: path.resolve(__dirname, 'public'),
@@ -36,6 +38,15 @@ hot:true,
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
+       {
+        test: /\.(png|jpg|jpeg|gif|svg)$/i,
+        type: "asset/resource",
+      },
+      {
+  test: /\.css$/i,
+  use: [MiniCssExtractPlugin.loader, "css-loader"],
+}
+
    ],}
    
 
