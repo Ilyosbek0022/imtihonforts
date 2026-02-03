@@ -9,7 +9,7 @@
 }
 
 @media (max-width: 758px) {
-a{
+.a{
     display: none;
 }
 .name{
@@ -58,6 +58,7 @@ h3{
 .attraction{
     height: 40px;
     width: 100px;
+    
    font-size: 16px;
 }
 }

@@ -1,27 +1,45 @@
-import React, { useEffect } from 'react'
+import React from "react"
+import { Link, Route, Routes } from "react-router-dom"
+import About from "../pages/about/about"
+import Keyboards from "../pages/keyboards/keyboards"
+import Name from "../pages/name/name"
+import Contact from "../pages/contact/contact"
+import Home from "../pages/home/home"
+
+
 
 const App = () => {
     
   return (
-    <div>
+    <div id="app">
    
  <header>
     <div className="between">
-        <div className="logo"><img src="/razer.svg" alt=""/><h1 className="name">Levicey</h1></div>
-        <div className="center"><a href="#">Leviosaa</a><a href="#">Leviosaa</a><a href="#">Leviosaa</a><a href="#">Leviosaa</a><a href="#">Leviosaa</a></div>
-        <div className="signup"><a href="#">Sign-up</a><button className="attraction">Log-in</button></div>
+        
+        <Link to="/" className="logolink"><div className="logo"><img src="/razer.svg" alt=""/>
+       <h1 className="name">Levicey</h1>
+   </div></Link>
+   
+        <div className="center">
+         <Link to="/about" className='a'>About</Link>
+         <Link to="/keyboards" className="a">Keyboards</Link>
+         <Link to="/name" className="a">Levioca</Link>
+         <Link to="/contact" className="a">Contact</Link>
+        </div>
+      
+        <div className="signup"><a href="#" className="a">Sign-up</a><button className="attraction">Log-in</button></div>
         
     </div>
  </header>
- <main>
-    <div className="box">
-        <h1 className="h1first">The real beauty of keyboards!!!</h1>
-        <h1 className="h1second">Buy now by one click</h1>
-        <h3>Keys turn imagination into reality.</h3>
-        <button className="attraction batoon">Click</button>
-       
-    </div>
- </main>
+ 
+   <Routes>
+   <Route path="/" element={<Home/>}></Route>
+    <Route path='/about' element={<About/>}></Route>
+    <Route path='/keyboards' element={<Keyboards/>}></Route>
+    <Route path='/name' element={<Name/>}></Route>
+    <Route path='/contact' element={<Contact/>}></Route>
+
+</Routes>
  </div>
   
   )
