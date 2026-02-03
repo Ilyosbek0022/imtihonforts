@@ -12,7 +12,7 @@ return[
       new HtmlWebpackPlugin({
         context:path.resolve(__dirname,"src"),
       template:"./index.html",
-       favicon: path.resolve(__dirname, "src", "razer.svg")
+favicon: path.resolve(__dirname, "../../public/razer.svg")
     }),
     
     new CleanWebpackPlugin(),
