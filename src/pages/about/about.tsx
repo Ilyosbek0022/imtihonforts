@@ -1,4 +1,5 @@
 import React from "react";
+import RecipeReviewCard from "../../components/card";
 
 
 const About: React.FC = () => {
@@ -58,6 +59,7 @@ const About: React.FC = () => {
         </p>
         <button>Explore Our Keyboards</button>
       </section>
+      <RecipeReviewCard/>
     </div>
   );
 };
